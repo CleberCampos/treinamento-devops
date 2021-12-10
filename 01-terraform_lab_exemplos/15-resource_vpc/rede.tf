@@ -2,16 +2,12 @@
 resource "aws_vpc" "main" {
   cidr_block       = "10.40.48.0/20" # uma classe de IP
   instance_tenancy = "default"       # - (Optional) A tenancy option for instances launched into the VPC. Default is default, which makes your instances shared on the host. Using either of the other options (dedicated or host) costs at least $2/hr.
-
+  enable_dns_hostnames = true
   tags = {
     Name = "vpc-turma2-cleber-tf"
   }
 }
 
-output "name" {
-  value = aws_vpc.main.id
-}
-/**/
 resource "aws_subnet" "my_subnet_a" {
   vpc_id            = aws_vpc.main.id
   cidr_block        = "10.40.48.0/24"
