@@ -1,1 +1,1 @@
-Olá alunos bem vindo ao terraform 1.0
+Estamos aprendendo Terraform porque vamos usar muito no futuro!

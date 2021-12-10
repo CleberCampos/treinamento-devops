@@ -9,8 +9,8 @@ output "dados_da_variavel" {
 
 output "dados_da_variavel_key" {
   value = [
-    for key, item in var.colaboradores :
-      "${key} - ${item.cargo} - ${item.email}"
+    for item in var.colaboradores :
+      " ${item.cargo} - ${item.email}"
   ]
 }
 
